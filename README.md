@@ -1,8 +1,3 @@
-I can provide the raw content of the `README.md` from the Canvas, including all Markdown formatting, so you can easily copy and paste it into your GitHub repository.
-
-Here is the complete plain text content:
-
-```markdown
 # Inventory System Management (Laravel)
 
 This project is a robust inventory management system built on the Laravel framework. It provides a web interface for standard CRUD operations (using Blade/Inertia/Livewire, etc., typical of a Laravel app) and a secure, token-authenticated REST API for product management.
