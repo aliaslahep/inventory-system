@@ -159,13 +159,14 @@ Include the generated token in the `Authorization` header of every API request:
 
 The product management API is fully secured and uses standard HTTP methods.
 
-| **Method** | **Endpoint** | **Purpose** | **Controller Action** | 
-| `GET` | `/api/user` | **Test Auth** | Confirms token validity. | 
-| `GET` | `/api/products` | **Index** (List) | Retrieve paginated products. | 
-| `POST` | `/api/products` | **Store** (Create) | Create a new product. | 
-| `GET` | `/api/products/{id}` | **Show** (Retrieve) | Retrieve a single product. | 
-| `PUT/PATCH` | `/api/products/{id}` | **Update** | Update an existing product. | 
-| `DELETE` | `/api/products/{id}` | **Destroy** (Delete) | Delete a specified product. | 
+| Method | Endpoint           | Description               |
+| ------ | ------------------ | ------------------------- |
+| POST   | /api/login         | Get auth token            |
+| GET    | /api/products      | List products (paginated) |
+| POST   | /api/products      | Create product            |
+| GET    | /api/products/{id} | Show product              |
+| PUT    | /api/products/{id} | Update product            |
+| DELETE | /api/products/{id} | Delete product            |
 
 ### POST /api/products Request/Response Structure
 
