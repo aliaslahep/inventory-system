@@ -53,6 +53,11 @@ cp .env.example .env
 
 2. Edit the `.env` file to configure your database connection (see section 3).
 
+3. Key generation
+```
+php artisan key:generate
+```
+
 ### 2.4. Database Migration
 
 Set up the database structure and seed initial data (if seeders exist):
