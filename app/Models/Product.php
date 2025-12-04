@@ -12,7 +12,6 @@ class Product extends Model
         'name', 'sku', 'price', 'quantity', 'description', 'status'
     ];
     
-    // Relationship: A Product belongs to many Categories
     public function categories()
     {
         return $this->belongsToMany(Category::class);

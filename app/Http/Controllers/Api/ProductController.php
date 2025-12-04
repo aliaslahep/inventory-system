@@ -25,7 +25,7 @@ class ProductController extends Controller
         }
     }
 
-    public function show($id) // Changed from Product $product to $id
+    public function show($id) 
     {
         try {
             $product = Product::with('categories')->find($id);
@@ -76,7 +76,7 @@ class ProductController extends Controller
         }
     }
 
-    public function update(ProductRequest $request, $id) // Changed from Product $product to $id
+    public function update(ProductRequest $request, $id) 
     {
         try {
             $product = Product::find($id);
@@ -111,7 +111,7 @@ class ProductController extends Controller
     }
 
 
-    public function destroy($id) // Change from Product $product to $id
+    public function destroy($id) 
     {
         try {
             $product = Product::find($id);
