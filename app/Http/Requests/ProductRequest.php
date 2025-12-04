@@ -21,8 +21,8 @@ class ProductRequest extends FormRequest
      */
     public function rules(): array
     {
-        
-            $productId = $this->route('product')->id ?? null;
+                
+        $productId = $this->route('product')->id ?? null;
 
         return [
             'name' => 'required|string|max:255',
