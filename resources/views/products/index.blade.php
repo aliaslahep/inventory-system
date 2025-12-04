@@ -45,20 +45,19 @@
                         @endforeach
                     </select>
 
-                    <button type="submit"
-                        class="bg-black hover:bg-gray-900 text-white font-semibold py-2 px-4 rounded shadow">
+                    <x-primary-button>
                         Filter
-                    </button>
+                    </x-primary-button>
 
                     @if (request()->hasAny(['search', 'category_id', 'sort']))
-                        <a href="{{ route('products.index') }}" class="text-gray-500 hover:text-gray-700 font-medium">
+                        <a href="{{ route('products.index') }}" class="text-red-200 hover:text-red-700 font-medium">
                             Clear
                         </a>
                     @endif
                 </form>
 
                 {{-- Table --}}
-                <div class="bg-white shadow rounded-lg overflow-hidden">
+                <div class="bg-white shadow rounded-lg overflow-hidden p-4 pt-6">
 
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead class="bg-gray-50">
@@ -109,24 +108,25 @@
                                         </span>
                                     </td>
 
-                                    <td class="px-6 py-4 text-right text-sm font-medium">
-                                        <a href="{{ route('products.edit', $product) }}"
-                                           class="text-indigo-600 hover:text-indigo-900 mr-4">
-                                            Edit
+                                   <td class="px-6 py-4 text-right text-sm font-medium flex items-center justify-end space-x-4">
+                                        <a href="{{ route('products.edit', $product) }}">
+                                            <x-primary-button>
+                                                Edit
+                                            </x-primary-button>
                                         </a>
-
+                                    </td>
+                                    <td class="px-6 py-4 text-right text-sm font-medium">
                                         <form action="{{ route('products.destroy', $product) }}" method="POST"
-                                              class="inline"
-                                              onsubmit="return confirm('⚠️ Are you sure you want to delete the product: {{ $product->name }}? This action cannot be undone.');">
+                                            onsubmit="return confirm('Are you sure you want to delete the product: {{ $product->name }}? This action cannot be undone.');">
                                             @csrf
                                             @method('DELETE')
-                                            <x-danger-button class="ms-2">
+                                            <x-danger-button>
                                                 Delete
                                             </x-danger-button>
                                         </form>
-
                                     </td>
-                                </tr>
+
+
 
                             @empty
                                 <tr>
