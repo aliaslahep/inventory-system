@@ -84,7 +84,11 @@ This application uses Laravel Breeze/Jetstream for session-based authentication 
 
 ### API Token Generation
 
-Postman Collection : https://aliaslahep3-9393032.postman.co/workspace/Personal-Workspace~ab43d291-c1f2-4ac2-82b4-a569df059077/collection/50567492-b028d488-1725-4220-9025-2e76e7ec2566?action=share&creator=50567492
+Postman Collection Link: 
+
+```
+https://aliaslahep3-9393032.postman.co/workspace/Personal-Workspace~ab43d291-c1f2-4ac2-82b4-a569df059077/collection/50567492-b028d488-1725-4220-9025-2e76e7ec2566?action=share&creator=50567492
+```
 
 To access the protected API, you must obtain a token for an existing user. There are two common methods:
 
