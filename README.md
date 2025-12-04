@@ -37,7 +37,7 @@ Install PHP dependencies via Composer and (if using assets like Vite/Mix) Node d
 
 composer install
 npm install
-npm run dev \# Or npm run build
+npm run dev 
 
 ```
 open new terminal and 
@@ -56,15 +56,7 @@ cp .env.example .env
 
 ```
 
-2. Generate a unique application key:
-
-```
-
-php artisan key:generate
-
-```
-
-3. Edit the `.env` file to configure your database connection (see section 3).
+2. Edit the `.env` file to configure your database connection (see section 3).
 
 ### 2.4. Database Migration
 
@@ -91,6 +83,8 @@ The core functionality revolves around two main models: `User`, `Product`, and `
 This application uses Laravel Breeze/Jetstream for session-based authentication for the web interface, and **Laravel Sanctum** for securing the API endpoints.
 
 ### API Token Generation
+
+Postman Collection : https://aliaslahep3-9393032.postman.co/workspace/Personal-Workspace~ab43d291-c1f2-4ac2-82b4-a569df059077/collection/50567492-b028d488-1725-4220-9025-2e76e7ec2566?action=share&creator=50567492
 
 To access the protected API, you must obtain a token for an existing user. There are two common methods:
 
@@ -192,3 +186,5 @@ The product management API is fully secured and uses standard HTTP methods.
 }
 
 ```
+
+
