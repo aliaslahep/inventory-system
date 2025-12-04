@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            ➕ Add New Product
+            Add New Product
         </h2>
     </x-slot>
 
@@ -13,9 +13,9 @@
                         @csrf
                         @include('products._form', ['product' => new App\Models\Product()])
                         <div class="mt-6">
-                            <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded shadow">
-                                Create Product
-                            </button>
+                            <x-primary-button type="submit">
+                                Update
+                            </x-primary-button>
                         </div>
                     </form>
                 </div>

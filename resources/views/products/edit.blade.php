@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            ✏️ Edit Product: {{ $product->name }}
+            Edit Product: {{ $product->name }}
         </h2>
     </x-slot>
 
@@ -14,9 +14,10 @@
                         @method('PUT')
                         @include('products._form', ['product' => $product])
                         <div class="mt-6">
-                            <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded shadow">
-                                Update Product
-                            </button>
+                            <x-primary-button type="submit">
+                                Update
+                            </x-primary-button>
+
                         </div>
                     </form>
                 </div>
