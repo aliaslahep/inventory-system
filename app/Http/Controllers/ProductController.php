@@ -16,10 +16,11 @@ class ProductController extends Controller
     {
         $query = Product::with('categories');
 
-        
         if ($search = $request->input('search')) {
-            $query->where('name', 'LIKE', "%{$search}%")
+            $query->where(function($q) use ($search) {
+                $q->where('name', 'LIKE', "%{$search}%")
                 ->orWhere('sku', 'LIKE', "%{$search}%");
+            });
         }
 
         if ($categoryId = $request->input('category_id')) {
@@ -32,14 +33,15 @@ class ProductController extends Controller
         $direction = $request->input('direction', 'asc');
         $query->orderBy($sort, $direction);
 
-        $products = $query->paginate(10)->withQueryString(); 
+        $products = $query->paginate(10)->withQueryString();
 
         return view('products.index', [
             'products' => $products,
-            'categories' => Category::all(), 
+            'categories' => Category::all(),
             'filters' => $request->only('search', 'category_id', 'sort', 'direction')
         ]);
     }
+        
 
     /**
      * Show the form for creating a new resource.
