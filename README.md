@@ -12,7 +12,7 @@ Ensure your system meets the following requirements:
 
 * Node.js & NPM (for frontend assets, if applicable)
 
-* MySQL/PostgreSQL database
+* MySQL database
 
 * A basic understanding of the Laravel framework.
 
@@ -24,7 +24,7 @@ Follow these steps to get the application running locally:
 
 ```
 
-git clone git@github.com:YourUsername/inventory-system.git
+git clone https://github.com/aliaslahep/inventory-system.git
 cd inventory-system
 
 ```
@@ -110,8 +110,8 @@ This assumes you have a separate, unprotected login route that generates a token
 ```
 
 {
-"email": "test@example.com",
-"password": "password"
+"email": "test@gmail.com",
+"password": "test@123"
 }
 
 ```
