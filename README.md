@@ -40,6 +40,11 @@ npm install
 npm run dev \# Or npm run build
 
 ```
+open new terminal and 
+
+```
+php artisan serve
+```
 
 ### 2.3. Environment Configuration
 
@@ -186,43 +191,4 @@ The product management API is fully secured and uses standard HTTP methods.
 }
 }
 
-```
-
-## 6. Running Tests
-
-This project uses PHPUnit for all testing. Tests are located in the `/tests` directory.
-
-### Running All Tests
-
-To execute all tests (Feature and Unit tests):
-
-```
-
-php artisan test
-
-# OR
-
-./vendor/bin/phpunit
-
-```
-
-### Running Specific Tests
-
-To run tests from a specific directory or file:
-
-```
-
-# Run all Feature tests
-
-php artisan test --group=feature
-
-# Run all tests in a specific file (e.g., ProductControllerTest)
-
-php artisan test tests/Feature/ProductApiTest.php
-
-```
-
-### Clearing Test Data
-
-Remember that Feature tests often interact with the database. To ensure a clean slate, it's recommended to use the `RefreshDatabase` trait in your test classes
 ```
