@@ -40,11 +40,6 @@ npm install
 npm run dev 
 
 ```
-open new terminal and 
-
-```
-php artisan serve
-```
 
 ### 2.3. Environment Configuration
 
@@ -67,6 +62,13 @@ Set up the database structure and seed initial data (if seeders exist):
 php artisan migrate --seed
 
 ```
+
+open new terminal and 
+
+```
+php artisan serve
+```
+
 
 ## 3. Database and Models
 
